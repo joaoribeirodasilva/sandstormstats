@@ -1,0 +1,29 @@
+# Capture objective
+LogGameplayEvents: Display: Objective 2 was captured for team 0 from team 1 by *SGT.BORGES* EXERCIT[76561198141121803], fuse[76561198125468085], M4né Garrucha[76561198291357861].
+#destroyed
+[2024.06.03-23.39.42:148][725]LogGameplayEvents: Display: Objective 1 owned by team 1 was destroyed for team 0 by RECRUTA[76561198298642012].
+#Kill/death
+[2024.06.03-23.55.58:772][721]LogGameplayEvents: Display: _Macarrão_[76561198234286820, team 0] killed Advisor[INVALID, team 1] with BP_Firearm_M4A1_C_2147369960
+# Start round
+[2024.06.03-23.57.57:965][ 29]LogGameMode: Display: State: PreRound -> RoundActive
+# Game over
+[2024.06.04-00.04.58:963][100]LogGameplayEvents: Display: Game over
+# Map
+[2024.06.04-00.05.09:380][719]LogWorld: SeamlessTravel to: /Game/Maps/Ministry/Ministry
+[2024.06.04-00.05.09:402][721]LogWorld: BeginTearingDown for /Game/Maps/Ministry/Ministry
+[2024.06.04-00.05.09:625][721]LogWorld: StartLoadingDestination to: /Game/Maps/Ministry/Ministry
+# Game Mode 
+[2024.06.04-00.05.11:361][773]LogLoad: Warning: Scenario 'Scenario_Ministry_Checkpoint_Security' is created for gamemode 'Class'/Script/Insurgency.INSCheckpointGameMode''
+[2024.06.04-00.05.11:361][773]LogLoad: Warning: Overrode scenario gamemode 'Class'/Script/Insurgency.INSCheckpointGameMode'' with child gamemode '/Script/Insurgency.INSCheckpointGameMode'.
+[2024.06.04-00.05.11:361][773]LogLoad: Game class is 'INSCheckpointGameMode'
+#Saida 
+[2024.06.04-00.57.05:399][881]LogRcon: 127.0.0.1:41350 << say Até mais administrador, RECRUTA!
+# Lost/Win rounds 
+[2024.06.03-14.41.08:551][586]LogGameplayEvents: Display: Round 1 Over: Team 1 won (win reason: Elimination)
+[2024.06.03-14.46.19:609][ 42]LogGameMode: Display: Recorded match results for new round: Winner:1, Pre-Swap:1
+
+# Round started 
+[2024.06.03-14.41.38:572][363]LogGameplayEvents: Display: Round 2 started
+
+
+
