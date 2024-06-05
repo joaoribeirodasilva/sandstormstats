@@ -6,5 +6,5 @@ import (
 
 type Team struct {
 	gorm.Model
-	Name string `gorm:"column:name;type:string;size:50;not null"`
+	Name string `json:"name" gorm:"column:name;type:string;size:50;not null"`
 }
