@@ -5,10 +5,9 @@ import (
 	"fmt"
 	"os"
 	"regexp"
-	"time"
 )
 
-type Server struct {
+/* type Server struct {
 	ID            string
 	LastLine      uint
 	LastTimestamp time.Time
@@ -54,7 +53,7 @@ type Kill struct {
 	DateTime time.Time
 	Role     string
 	Shared   bool
-}
+} */
 
 func LogRead(path string) {
 	f, err := os.Open(path)
@@ -69,12 +68,19 @@ func LogRead(path string) {
 	regexpStartRound, _ := regexp.Compile(`LogGameMode: Display: State: PreRound -> RoundActive`)
 	regexpEndRound, _ := regexp.Compile(`LogGameplayEvents: Display: Round \d* Over:`)
 	regexpKill, _ := regexp.Compile(`LogGameplayEvents: Display: .* killed`)
-
+	regexpHasDate, _ := regexp.Compile(`^\[\d{4}\.\d{2}\.\d{2}\-\d{2}\.\d{2}\.\d{2}\:\d{3}\]`)
+	regexpHasValidLogs, _ := regexp.Compile(`(LogGameplayEvents)|(LogGameMode)|(LogLoad)`)
 	r := bufio.NewReader(f)
 	//s, e := Readln(r)
 	for {
 
 		s, e := Readln(r)
+
+		hasDate := regexpHasDate.MatchString(s)
+		hasValidLogs := regexpHasValidLogs.MatchString(s)
+		if !hasDate || !hasValidLogs {
+			continue
+		}
 
 		match := regexpKill.MatchString(s)
 		if match {
