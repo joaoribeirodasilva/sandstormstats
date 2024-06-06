@@ -11,6 +11,8 @@ import (
 	"gorm.io/gorm"
 )
 
+// TODO: Wins update game_players and other game times
+
 type LogRound struct {
 	RoundID   *uint
 	Round     uint
