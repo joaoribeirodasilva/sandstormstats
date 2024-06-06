@@ -6,6 +6,7 @@ import (
 
 	"github.com/joaoribeirodasilva/sandstormstats/conf"
 	"github.com/joaoribeirodasilva/sandstormstats/db"
+	"github.com/joaoribeirodasilva/sandstormstats/log_parser"
 )
 
 func main() {
@@ -23,5 +24,7 @@ func main() {
 	db := db.New(conf.GetDbConf(), logger)
 	db.Connect()
 
-	//LogRead("./log/2f70c02c-a71d-4404-bb70-d486d0692f49-backup-2024.06.04-16.02.16.log")
+	parser := log_parser.New(db, logger)
+	parser.Parse()
+
 }
